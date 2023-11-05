@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather app</title>
+
+    <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <span class=week>
+                The Next 5 days
+            </span>
+            <div class="row">
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">High</th>
+                            <th scope="col">Low</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Monday</th>
+                            <td><img class="smaller-image" 
+                            src="/src/weatherapp.webp" alt=""></td>
+                            <td>58°F</td>
+                            <td>44°F</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tuesday</th>
+                            <td><img class="smaller-image" 
+                            src="/src/weatherapp.webp" alt=""></td>
+                            <td>56°F</td>
+                            <td>46°F</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wednesday</th>
+                            <td><img class="smaller-image" 
+                            src="/src/weatherapp.webp" alt=""></td>
+                            <td>56°F</td>
+                            <td>50°F</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Thursday</th>
+                            <td><img class="smaller-image" 
+                            src="/src/weatherapp.webp" alt=""></td>
+                            <td>54°F</td>
+                            <td>46°F</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Friday</th>
+                            <td><img class="smaller-image" 
+                            src="/src/weatherapp.webp" alt=""></td>
+                            <td>51°F</td>
+                            <td>43°F</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            <div class="col-6">
+                <p id = "the-day">
+                    9 October 2023
+                </p>
+                <h1 id="location">
+                    Brighton, MI
+                </h1>
+                <div class="city">
+                <h2 id="currentTemperature">
+                     <span id="real-temp">Currently: 68</span><a class="c"> C°</a>||<a class="f"
+                        >F°</a
+                </h2>
+                </div>
+                <p>
+                <div>Precipitation: <span id="real-precip">0</span>%</div>
+                <div>Humidity: <span id="real-hum">80</span>%</div>
+                <div>Wind: <span id="real-wind">1</span>km/h</div>
+                </p>
+                <img src="/src/weatherapp.webp" alt="">
+            </div>
+        </div>
+
+        <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="searchCityInput"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                  id="search"
+                />
+              </div>
+            </div>
+          </form>
+          <button class="current" id="current-location">Find Current Location</button>
+            </div>
+        </div>
+    </div>
+    <script 
+        src="src/index.js">
+	</script>
+</body>
+</html>
